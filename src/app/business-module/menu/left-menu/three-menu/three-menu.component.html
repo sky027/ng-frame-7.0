@@ -1,0 +1,39 @@
+<div class="three-menu" *ngIf="isShow">
+  <div class="three-menu-title">
+    <p>{{title | navigationTranslate}}</p>
+  </div>
+  <div class="three-menu-tree">
+    <ul class="first-ul">
+      <ng-container *ngFor="let item of threeMenuList">
+        <li *ngIf="!(item.children && item.children.length > 0)"
+            (click)="itemClick(item)"
+            [ngClass]="{'bgc':item.menuName === menuName}">
+          <p><span>{{item.menuId | navigationTranslate }}</span></p>
+        </li>
+
+        <li *ngIf="item.children && item.children.length > 0">
+          <p (click)="expandItem(item)">
+            <i *ngIf="!item.expand" nz-icon type="caret-right" theme="outline"></i>
+            <i *ngIf="item.expand" nz-icon type="caret-down" theme="outline"></i>
+            <span>{{item.menuName}}</span>
+          </p>
+          <ul class="second-ul" *ngIf="item.expand">
+            <li *ngFor="let el of item.children"
+                (click)="itemClick(el)"
+                [ngClass]="{'bgc':el.menuName === menuName}">
+              <p>{{el.menuId | navigationTranslate }}</p>
+            </li>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="three-menu-close">
+    <i nz-icon type="double-left" theme="outline" (click)="isShow = !isShow"></i>
+  </div>
+</div>
+
+<div class="three-menu-expand" *ngIf="!isShow">
+  <i nz-icon type="double-right" theme="outline" (click)="isShow = !isShow"></i>
+</div>
+

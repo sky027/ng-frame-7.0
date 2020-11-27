@@ -1,0 +1,10 @@
+<div class="first-menu">
+  <ul class="first-ul" [class.mini-menu]="isCollapsed">
+    <ng-container *ngFor="let item of menuList">
+      <app-menu-item  [menuItem]="item" [isCollapsed]="isCollapsed"
+                      (menuClickHandle)="menuClickHandle($event)"
+                      (menuSelected)="menuSelectedHandle($event)">
+      </app-menu-item>
+    </ng-container>
+  </ul>
+</div>

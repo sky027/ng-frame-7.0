@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port=5000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,9 +19,15 @@
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "date-fns": "^2.16.1",
+    "fibers": "^3.1.0",
+    "html-webpack-plugin": "^2.21.0",
+    "jquery": "^3.1.1",
     "rxjs": "~6.5.4",
+    "swiper": "^4.5.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "ztree": "^3.5.24"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.4",

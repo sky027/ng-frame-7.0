@@ -1,0 +1,72 @@
+.three-menu {
+  position: relative;
+  height: 100%;
+  width: 190px;
+  background-color: #EAEDF1;
+  z-index: 16;
+
+  .three-menu-title {
+    padding: 30px 30px 15px 30px;
+    p {
+      color: #333333;
+      font-weight: 900;
+    }
+  }
+
+  .three-menu-tree {
+    .bgc {
+      background-color: #FFF;
+    }
+    .first-ul li {
+      position: relative;
+      line-height: 42px;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      p {
+        position: relative;
+        left: 30px;
+
+        i {
+          position: absolute;
+          font-size: 8px;
+          top: 16px;
+          left: -16px;
+        }
+      }
+      .second-ul li{
+        cursor: pointer;
+        p {
+          position: relative;
+          left: 48px;
+          width: 142px;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .three-menu-close {
+    position:absolute;
+    top: 50%;
+    right: 0;
+
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+.three-menu-expand {
+  height: 100%;
+  width: 15px;
+
+  i {
+    position: relative;
+    cursor: pointer;
+    top: 50%;
+  }
+}
